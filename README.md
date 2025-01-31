@@ -49,7 +49,7 @@ This size reflects the basic structure, including the project files, virtual env
 
 ### Server Running:
 
-![Server Running Screenshot](screenshot_server_running_new.png)
+![Server Running Screenshot](screenshot_server_running.png)
 
 ### Failed to Access Protected Data:
 
