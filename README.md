@@ -2,13 +2,54 @@
 
 ## Overview
 
-This project demonstrates how to create a secure RESTful API using Django and JWT (JSON Web Tokens) for authentication. It includes functionality for user registration, login, and protected API endpoints. JWT-based authentication ensures that user data remains private and secure.
+This project demonstrates how to build a secure RESTful API using Django and JSON Web Tokens (JWT) for authentication. It includes features like user registration, login, and protected API endpoints, ensuring that user data is kept secure and private. The JWT-based authentication system provides a stateless and scalable method for handling authentication.
+
+---
+
+## Project Structure
+```bash
+django-rest-jwt-api/
+│── api/                   # Application with views and models for API
+│── core/                  # Django settings and configuration
+│── manage.py              # Django management script
+│── requirements.txt       # Project dependencies
+│── README.md              # Project documentation
+```
+
+## Directory Sizes
+
+Below are the sizes of the key files and directories in the project after setting up the virtual environment, installing the required dependencies, and creating an empty SQLite database:
+
+```bash
+$ du -ah --max-depth=1 .
+
+4,0K    ./LICENSE
+4,0K    ./requirements.txt
+4,0K    ./.gitignore
+4,0K    ./manage.py
+60K     ./screenshot_postman_register.png
+160K	./db.sqlite3
+36K 	./core
+68K     ./screenshot_postman_login.png
+72K	    ./screenshot_postman_accessing_a_protected_endpoint.png
+64K	    ./screenshot_server_running.png
+60K	    ./api
+16K	    ./README.md
+72K	    ./screenshot_postman_failed_to_access_protected_data.png
+696K	./.git
+72M     ./env39
+73M	    .
+```
+
+This size reflects the basic structure, including the project files, virtual environment, and a freshly created database.
+
+---
 
 ## Screenshots
 
 ### Server Running:
 
-![Server Running Screenshot](screenshot_server_running.png)
+![Server Running Screenshot](screenshot_server_running_new.png)
 
 ### Failed to Access Protected Data:
 
@@ -28,6 +69,7 @@ This project demonstrates how to create a secure RESTful API using Django and JW
 
 ![Accessing a Protected Endpoint Screenshot](screenshot_postman_accessing_a_protected_endpoint.png)
 
+---
 
 ## Features
 - **User Registration & Login**: Secure authentication system with hashed passwords.
@@ -221,16 +263,6 @@ Authorization: Bearer <JWT_TOKEN>
 
 ```bash
 curl -X GET http://localhost:8000/api/protected/ -H "Authorization: Bearer <your_jwt_token>"
-```
-
-## Project Structure
-```bash
-django-rest-jwt-api/
-│── api/                   # Application with views and models for API
-│── core/                  # Django settings and configuration
-│── manage.py              # Django management script
-│── requirements.txt       # Project dependencies
-│── README.md              # Project documentation
 ```
 
 ## Code Overview
